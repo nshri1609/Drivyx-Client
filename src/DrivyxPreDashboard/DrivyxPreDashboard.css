@@ -1,0 +1,134 @@
+.DrivyxPreDashboard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.DrivyxPreDashboard-header {
+    background-color: white;
+    /* margin-top: 2rem; */
+    padding: 2rem;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.DrivyxPreDashboard-headerInput {
+    width: 100%;
+    max-width: 25rem;
+    height: 10rem;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    margin: 2rem auto 1rem;
+    color: #333;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.DrivyxPreDashboard-headerInput:hover {
+    background-color: #e0e0e0;
+}
+
+.DrivyxPreDashboard-header-content {
+    text-align: center;
+}
+
+.DrivyxPreDashboard-header-button {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.DrivyxPreDashboard-btnOne, .DrivyxPreDashboard-btnTwo {
+    padding: 10px;
+    font-size: 15px;
+    width: 8rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.DrivyxPreDashboard-btnOne {
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+}
+
+.DrivyxPreDashboard-btnOne:hover {
+    background-color: green;
+    color: white;
+}
+
+.DrivyxPreDashboard-btnTwo {
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+.DrivyxPreDashboard-btnTwo:hover {
+    background-color: darkgreen;
+}
+
+.DrivyxPreDashboard-input {
+    max-width: 32rem;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 40rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+} 
+
+.DrivyxPreDashboard-input:focus {
+    border-color: green;
+    outline: none;
+}
+
+.DrivyxPreDashboard-inputs {
+    width: 100%;
+    max-width: 40rem;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.DrivyxPreDashboard-inputs:hover {
+    background-color: darkgreen;
+}
+
+.DrivyxPreDashboard-form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.DrivyxPreDashboard-form-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+
+
+
+ 

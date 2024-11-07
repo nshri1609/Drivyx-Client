@@ -1,0 +1,26 @@
+.WhyChoose {
+    margin-top: 9rem;
+    margin-left: 2rem;
+}
+
+.WhyChoose-header-main {
+    margin-top: 6rem;
+}
+
+.WhyChoose-header-mainContent {
+    display: flex;
+    justify-content: space-around;
+}
+
+.WhyChoose-header-mainContent img {
+    width: 20rem;
+}
+
+.WhyChoose-innerSection {
+    margin-top: 8rem;
+}
+
+.WhyChoose-innerSection h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}

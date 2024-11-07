@@ -1,0 +1,32 @@
+.OurServices {
+    margin-left: 2rem;
+    margin-top: 8rem;
+}
+
+.OurServices-heaader h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.OurServices-heaader-content {
+    text-align: center;
+    margin-top: 9rem;
+}
+
+.OurServices-heaader-contentOne h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.OurServices-innerfelex {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+
+.OurServices-heaader-contentOne img {
+    width: 20rem;
+    height: 13rem;
+}

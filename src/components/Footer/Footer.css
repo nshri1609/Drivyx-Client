@@ -1,0 +1,32 @@
+.Footer {
+    background-color: green;
+    margin-top: 8rem;
+    padding-bottom: 5rem;
+    color: white;
+}
+
+.Footer-header {
+    padding-top: 6rem;
+    margin-left: 6rem;
+    display: flex;
+    gap: 4rem;
+}
+
+.Footer hr {
+    width: 60rem;
+    margin-top: 4rem;
+    border: 3px solid white;
+    margin-left: 6rem;
+}
+.Footer-icons {
+    display: flex;
+    margin-left: 6rem;
+    margin-top: 3rem;
+    gap: 10px;
+}
+
+.Footer-icons h2 {
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+}
