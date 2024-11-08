@@ -1,30 +1,70 @@
-.WhyChoose {
-    margin-top: 9rem;
+@media screen and (min-width: 350px) {
+    .WhyChoose {
+        margin-top: 6rem;
+        
+    }
     
+    .WhyChoose-header-main {
+        margin-top: 4rem;
+    }
+    
+    .WhyChoose-header h1 {
+        margin-left: 1rem;
+    }
+    
+    .WhyChoose-header-mainContent {
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .WhyChoose-header-mainContent img {
+        width: 10rem;
+    }
+    
+    .WhyChoose-innerSection {
+        margin-top: 4rem;
+    }
+    
+    .WhyChoose-innerSection h2 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
 }
 
-.WhyChoose-header-main {
-    margin-top: 6rem;
-}
 
-.WhyChoose-header h1 {
-    margin-left: 2rem;
-}
 
-.WhyChoose-header-mainContent {
-    display: flex;
-    justify-content: space-evenly;
-}
 
-.WhyChoose-header-mainContent img {
-    width: 20rem;
-}
 
-.WhyChoose-innerSection {
-    margin-top: 8rem;
-}
-
-.WhyChoose-innerSection h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+@media screen and (min-width: 1050px) {
+    .WhyChoose {
+        margin-top: 9rem;
+        
+    }
+    
+    .WhyChoose-header-main {
+        margin-top: 6rem;
+    }
+    
+    .WhyChoose-header h1 {
+        margin-left: 2rem;
+    }
+    
+    .WhyChoose-header-mainContent {
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .WhyChoose-header-mainContent img {
+        width: 20rem;
+    }
+    
+    .WhyChoose-innerSection {
+        margin-top: 8rem;
+    }
+    
+    .WhyChoose-innerSection h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
 }

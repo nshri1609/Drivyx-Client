@@ -3,9 +3,15 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoIosCreate } from "react-icons/io";
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
+import { useLocation } from 'react-router-dom';
+
 import "./MainDashBoard.css";
 
 const MainDashBoard = () => {
+
+  const location = useLocation();
+  const { user } = location.state || {};  // Assuming you pass `user` in location.state
+
   const [selectedSection, setSelectedSection] = useState('profile');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -39,7 +45,7 @@ const MainDashBoard = () => {
         <div className='UserSettings-headers'>
           <div className='UserSettings-users'>
             <div className='UserSettings-users-conetent'>
-              <h1>Welcome User</h1>
+              <h1>Welcome {user?.username || 'User'}</h1>  {/* Displaying username */}
               <p>Join the movement. Inspire support. Create a better future.</p>
               <p>Create and launch your first ESG project today to drive positive change</p>
             </div>
@@ -127,3 +133,9 @@ const MainDashBoard = () => {
 };
 
 export default MainDashBoard;
+
+
+
+
+
+

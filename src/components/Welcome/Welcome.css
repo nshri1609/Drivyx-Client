@@ -1,14 +1,33 @@
-.Welcome {
-    margin-left: 2rem;
+@media screen and (min-width: 350px) {
+    .Welcome {
+        margin-left: 1rem;
+    }
+    
+    .Welcome-header h1 {
+        margin-top: 3rem;
+        margin-bottom: 10px;
+    }
+    
+    .Welcome-header p {
+        margin-top: 10px;
+        color: rgba(0, 0, 0, 0.852);
+    }
 }
 
-.Welcome-header h1 {
-    margin-top: 3rem;
-    margin-bottom: 10px;
-}
 
-.Welcome-header p {
-    font-size: 1.3rem;
-    margin-top: 10px;
-    color: rgba(0, 0, 0, 0.852);
+@media screen and (min-width: 1050px) {
+    .Welcome {
+        margin-left: 2rem;
+    }
+    
+    .Welcome-header h1 {
+        margin-top: 3rem;
+        margin-bottom: 10px;
+    }
+    
+    .Welcome-header p {
+        font-size: 1.3rem;
+        margin-top: 10px;
+        color: rgba(0, 0, 0, 0.852);
+    }
 }

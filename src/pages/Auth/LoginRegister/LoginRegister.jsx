@@ -4,12 +4,72 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const LoginRegister = () => {
   const [isSignUpMode, setIsSignUpMode] = useState(false);
+  const [formData, setFormData] = useState({ username: '', email: '', password: '' });
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [user, setUser] = useState(null); 
+  const navigate = useNavigate();
 
   const toggleSignUpMode = () => {
     setIsSignUpMode(!isSignUpMode);
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setErrorMessage(''); // Clear previous errors
+
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+      console.log('User registered:', response.data);
+      toggleSignUpMode(); // Switch to login after successful registration
+    } catch (error) {
+      console.error('Registration error:', error.response?.data || error.message);
+      setErrorMessage('Registration failed. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setErrorMessage(''); // Clear previous errors
+
+    try {
+      const loginResponse = await axios.post('http://localhost:5000/api/auth/login', {
+        email: formData.email, // Use email instead of username
+        password: formData.password,
+      });
+      console.log('User logged in:', loginResponse.data);
+
+      // Fetch user data after login
+      const userResponse = await axios.get('http://localhost:5000/api/auth/user', {
+        headers: { Authorization: `Bearer ${loginResponse.data.token}` }
+      });
+
+      console.log('User data fetched:', userResponse.data);
+
+      // Store the user data in the state
+      setUser(userResponse.data);
+
+      // Pass user data to the next page (MainDashBoard)
+      navigate('/mainDashboard', { state: { user: userResponse.data } });
+    } catch (error) {
+      console.error('Login error:', error.response?.data || error.message);
+      setErrorMessage(error.response?.data?.message || 'Login failed. Please check your credentials.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -17,102 +77,71 @@ const LoginRegister = () => {
       <div className="forms-container">
         <div className="signin-signup">
           {/* Sign In Form */}
-          <form action="#" className="sign-in-form">
+          <form className="sign-in-form" onSubmit={handleLogin}>
             <h2 className="title">Sign in</h2>
             <div className="input-field">
-              <i className="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <i className="fas fa-envelope"></i>
+              <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
             </div>
             <div className="input-field">
               <i className="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
             </div>
-            <input type="submit" value="Login" className="btn solid" />
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
+            <input type="submit" value={loading ? "Logging in..." : "Login"} className="btn solid" disabled={loading} />
             <p className="social-text">Or Sign in with social platforms</p>
             <div className="social-media">
-              <a href="#" className="social-icon">
-                <i className="FaXTwitter"><FaXTwitter/></i>
-              </a>
-              <a href="#" className="social-icon">
-                <i className="FaGithub"><FaGithub/></i>
-              </a>
-              <a href="#" className="social-icon">
-                <i className="FaLinkedin"><FaLinkedin/></i>
-              </a>
-              <a href="#" className="social-icon">
-                <i className="FcGoogle"><FcGoogle/></i>
-              </a>
+              <a href="#" className="social-icon"><FaXTwitter /></a>
+              <a href="#" className="social-icon"><FaGithub /></a>
+              <a href="#" className="social-icon"><FaLinkedin /></a>
+              <a href="#" className="social-icon"><FcGoogle /></a>
             </div>
           </form>
 
           {/* Sign Up Form */}
-          <form action="#" className="sign-up-form">
+          <form className="sign-up-form" onSubmit={handleSignUp}>
             <h2 className="title">Sign up</h2>
             <div className="input-field">
               <i className="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
             </div>
             <div className="input-field">
               <i className="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
             </div>
             <div className="input-field">
               <i className="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
             </div>
-            <input type="submit" className="btn" value="Sign up" />
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
+            <input type="submit" className="btn" value="Sign up" disabled={loading} />
             <p className="social-text">Or Sign up with social platforms</p>
             <div className="social-media">
-              <a href="#" className="social-icon">
-                <i className="FaLinkedin"><FaLinkedin/></i>
-              </a>
-              <a href="#" className="social-icon">
-                <i className="FaGithub"><FaGithub/></i>
-              </a>
-              <a href="#" className="social-icon">
-                <i className="FaLinkedin"><FaLinkedin/></i>
-              </a>
-              <a href="#" className="social-icon">
-                <i className="FcGoogle"><FcGoogle/></i>
-              </a>
+              <a href="#" className="social-icon"><FaXTwitter /></a>
+              <a href="#" className="social-icon"><FaGithub /></a>
+              <a href="#" className="social-icon"><FaLinkedin /></a>
+              <a href="#" className="social-icon"><FcGoogle /></a>
             </div>
           </form>
         </div>
       </div>
-
+      {/* Panels */}
       <div className="panels-container">
         <div className="panel left-panel">
           <div className="content">
             <h3>Welcome to Drivyx</h3>
-            <p>
-              Drivyx: Where Businesses Grow Responsibly
-            </p>
-            <button className="btn transparent" onClick={toggleSignUpMode}>
-              Sign up
-            </button>
+            <p>Drivyx: Where Businesses Grow Responsibly</p>
+            <button className="btn transparent" onClick={toggleSignUpMode}>Sign up</button>
           </div>
-          <img
-            src="https://i.ibb.co/6HXL6q1/Privacy-policy-rafiki.png"
-            className="image"
-            alt=""
-          />
+          <img src="https://i.ibb.co/6HXL6q1/Privacy-policy-rafiki.png" className="image" alt="" />
         </div>
-
         <div className="panel right-panel">
           <div className="content">
             <h3>Welcome to Drivyx</h3>
-            <p>
-              Drivyx: Where Businesses Grow Responsibly
-            </p>
-            <button className="btn transparent" onClick={toggleSignUpMode}>
-              Sign in
-            </button>
+            <p>Drivyx: Where Businesses Grow Responsibly</p>
+            <button className="btn transparent" onClick={toggleSignUpMode}>Sign in</button>
           </div>
-          <img
-            src="https://i.ibb.co/nP8H853/Mobile-login-rafiki.png"
-            className="image"
-            alt=""
-          />
+          <img src="https://i.ibb.co/nP8H853/Mobile-login-rafiki.png" className="image" alt="" />
         </div>
       </div>
     </div>

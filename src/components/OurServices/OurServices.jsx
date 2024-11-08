@@ -17,8 +17,8 @@ const OurServices = () => {
 
         <div className='OurServices-heaader-content'>
           <div className='OurServices-innerfelex'>
-            <div className='OurServices-heaader-contentOne'>
-              <img src={servicesOne} alt="" />
+            <div className='OurServices-heaader-contentOne first'>
+              <img src="https://cdn-icons-png.freepik.com/512/1710/1710023.png" className='onee' alt="" />
               <h2>Job & Services</h2>
               <p>
                 Connect with experts and professionals ready to help your <br />
@@ -29,8 +29,8 @@ const OurServices = () => {
               </p>
             </div>
 
-            <div className='OurServices-heaader-contentOne'>
-              <img src={servicesTwo} alt="" />
+            <div className='OurServices-heaader-contentOne '>
+              <img src={servicesTwo} className='OurServices-heaader-contentOne-img' alt="" />
               <h2>Job & Services</h2>
               <p>
                 Connect with experts and professionals ready to help your <br />
@@ -42,7 +42,7 @@ const OurServices = () => {
             </div>
           </div>
           <div className='OurServices-heaader-contentOne'>
-            <img src={servicesThree} alt="" />
+            <img src={servicesThree} className='OurServices-heaader-contentOne-img' alt="" />
             <h2>Job & Services</h2>
             <p>
               Connect with experts and professionals ready to help your <br />

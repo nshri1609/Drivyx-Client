@@ -1,60 +1,133 @@
-.UserGrowth {
-    margin-top: 10rem;
+@media screen and (min-width: 350px) {
+    .UserGrowth {
+        margin-top: 5rem;
+    }
+    
+    .UserGrowth h1 {
+        padding: 10px;
+        margin-bottom: 2rem;
+    }
+    
+    .Growth-header-content {
+        position: relative;
+        min-height: 50vh;
+        background-image: url("https://images.unsplash.com/photo-1696937525057-efcb5dbc84e3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z3JlZW4lMjBsZWF2ZXMlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+    }
+    
+    .Growth-header-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: inherit; 
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px); 
+        z-index: -1;
+    }
+    
+    .Growth-header-content {
+        text-align: center;
+    }
+    
+    
+    .Growth-header-content p {
+        text-align: center;
+        margin-top: 5rem;
+        color: white;
+        font-size: 1rem;
+        position: relative;
+        z-index: 1; 
+    }
+    
+    .Growth-header-content button {
+        margin-top: 2rem;
+        padding: 15px;
+        background-color: green;
+        color: white;
+        border: none;
+        width: 9rem;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    
 }
 
-.UserGrowth h1 {
-    margin-left: 2rem;
-    margin-bottom: 3rem;
+
+
+
+
+
+@media screen and (min-width: 1050px) {
+    .UserGrowth {
+        margin-top: 10rem;
+    }
+    
+    .UserGrowth h1 {
+        margin-left: 2rem;
+        padding: 0;
+        margin-bottom: 3rem;
+    }
+    
+    .Growth-header-content {
+        position: relative;
+        min-height: 60vh;
+        background-image: url("https://images.unsplash.com/photo-1696937525057-efcb5dbc84e3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z3JlZW4lMjBsZWF2ZXMlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+    }
+    
+    .Growth-header-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: inherit; 
+        background-size: cover;
+        background-position: center;
+        filter: blur(8px); 
+        z-index: -1;
+    }
+    
+    .Growth-header-content {
+        text-align: center;
+    }
+    
+    
+    .Growth-header-content p {
+        text-align: center;
+        margin-top: 9rem;
+        color: white;
+        font-size: 1.6rem;
+        position: relative;
+        z-index: 1; 
+    }
+    
+    .Growth-header-content button {
+        margin-top: 3rem;
+        padding: 15px;
+        background-color: green;
+        color: white;
+        border: none;
+        width: 12rem;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    
 }
-
-.Growth-header-content {
-    position: relative;
-    min-height: 60vh;
-    background-image: url("https://images.unsplash.com/photo-1696937525057-efcb5dbc84e3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Z3JlZW4lMjBsZWF2ZXMlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-}
-
-.Growth-header-content::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: inherit; 
-    background-size: cover;
-    background-position: center;
-    filter: blur(8px); 
-    z-index: -1;
-}
-
-.Growth-header-content {
-    text-align: center;
-}
-
-
-.Growth-header-content p {
-    text-align: center;
-    margin-top: 9rem;
-    color: white;
-    font-size: 1.6rem;
-    position: relative;
-    z-index: 1; 
-}
-
-.Growth-header-content button {
-    margin-top: 3rem;
-    padding: 15px;
-    background-color: green;
-    color: white;
-    border: none;
-    width: 12rem;
-    border-radius: 10px;
-    cursor: pointer;
-    text-align: center;
-    justify-content: center;
-}
-
