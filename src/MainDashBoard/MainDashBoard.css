@@ -1,0 +1,290 @@
+@media screen and (min-width: 350px) {
+    .UserSettings-headers {
+        margin-top: 10rem;
+        color: white;
+        margin-left: 5px;
+    }
+
+    /* .UserSettings-headers h1 {
+        margin-left: 10px;
+    } */
+
+    .UserSettings-sections {
+        list-style: none;
+        margin-bottom: 10px;
+        gap: 2rem;
+        margin-top: 4.5rem;
+        cursor: pointer;
+    }
+
+    .UserSettings-headers hr {
+        width: 20rem;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        border: none;
+        height: 3px;
+        color: #333;
+        background-color: #333;
+    }
+
+
+    .UserSettings-content {
+        margin-top: 2rem;
+        padding: 1rem;
+        color: white;
+        border-radius: 5px;
+        width: 80%;
+    }
+
+
+    .UserSettings-sections h3 {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s ease;
+        border-radius: 5px;
+    }
+
+    .UserSettings-sections h3:hover {
+        background-color: #333;
+        width: 20rem;
+    }
+
+    .selected {
+        background-color: #001218;
+        color: #fff;
+        width: 20rem;
+    }
+
+    .UserSettings-content {
+        margin-top: 2rem;
+        padding: 1rem;
+        color: white;
+        border-radius: 5px;
+        width: 80%;
+    }
+
+    .UserSettings-profile img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 30px;
+    }
+
+    .UserSettings-profile h3,
+    button {
+        margin-top: 20px;
+    }
+
+    .UserSettings-profile button {
+        padding: 20px;
+        color: white;
+        background: #001218;
+        margin-top: 20px;
+        border: none;
+    }
+
+    .UserSettings-account button {
+        padding: 20px;
+        color: white;
+        background: red;
+        margin-top: 20px;
+        border: none;
+    }
+
+    .UserSettings-message {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #28a745;
+    }
+
+    .UserSettings-message.error {
+        background-color: #dc3545;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1050px) {
+    .UserSettings-headers {
+        margin-top: 10rem;
+        color: black;
+        margin-left: 3rem;
+    }
+
+    .UserSettings-sections {
+        list-style: none;
+        margin-bottom: 10px;
+        display: flex;
+        gap: 18rem;
+        margin-top: 4.5rem;
+        cursor: pointer;
+    }
+
+    .UserSettings-headers hr {
+        width: 85rem;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        border: none;
+        height: 3px;
+        color: #333;
+        background-color: #333;
+    }
+
+
+    .UserSettings-content {
+        margin-top: 2rem;
+        padding: 1rem;
+        color: white;
+        border-radius: 5px;
+        width: 80%;
+    }
+
+
+    .UserSettings-sections h3 {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s ease;
+        border-radius: 5px;
+    }
+
+    .UserSettings-sections h3:hover {
+        background-color: rgba(0, 128, 0, 0.851);
+        width: auto;
+    }
+
+    .selected {
+        background-color: green;
+        color: #fff;
+        width: auto;
+    }
+
+    .UserSettings-content {
+        margin-top: 2rem;
+        padding: 1rem;
+        color: white;
+        border-radius: 5px;
+        width: 80%;
+    }
+
+    .UserSettings-profile img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 30px;
+    }
+
+    .UserSettings-profile h3,
+    button {
+        margin-top: 20px;
+    }
+
+    .UserSettings-profile button {
+        padding: 20px;
+        color: white;
+        background: #001218;
+        margin-top: 20px;
+        border: none;
+    }
+
+    .UserSettings-account button {
+        padding: 20px;
+        color: white;
+        background: red;
+        margin-top: 20px;
+        border: none;
+    }
+
+    .UserSettings-message {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #28a745;
+        /* Green for success */
+    }
+
+    .UserSettings-message.error {
+        background-color: #dc3545;
+        /* Red for error */
+    }
+
+}
+
+
+.UserSettings-users {
+    display: flex;
+    background: rgb(245,255,0);
+background: linear-gradient(90deg, rgba(245,255,0,0.6446953781512605) 6%, rgba(12,36,0,1) 84%, rgba(207,201,190,1) 100%);
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 15px;
+    width: 84rem;
+}
+
+.UserSettings-users-conetent h1 {
+    margin-bottom: 6px;
+}
+
+.UserSettings-users-conetent p {
+    margin-top: 5px;
+}
+
+.UserSettings-users-conetent-button {
+    padding: 5px;
+    color: white;
+    background: green;
+    border: none;
+    width: 8rem;
+    border-radius: 10px;
+}
+
+.MainDashBoard-New {
+    padding: 30px;
+}
+
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 10px;
+  }
+  
+  .modal-content button {
+    margin-top: 20px;
+    padding: 8px 16px;
+    background: green;
+    width: 8rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

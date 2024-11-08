@@ -51,7 +51,7 @@
 
 .Navbar-header-contentThree button {
     padding: 0.75rem 1rem;
-    background-color: black;
+    background-color: green;
     color: white;
     border: none;
     border-radius: 10px;
@@ -61,5 +61,5 @@
 }
 
 .Navbar-header-contentThree button:hover {
-    background-color: #555;
+    background-color: rgba(0, 128, 0, 0.81);
 }

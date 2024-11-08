@@ -3,6 +3,7 @@ import Home from './pages/Home/Home'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LoginRegister from './pages/Auth/LoginRegister/LoginRegister'
 import DrivyxPreDashboard from './DrivyxPreDashboard/DrivyxPreDashboard'
+import MainDashBoard from './MainDashBoard/MainDashBoard'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path="/loginRegister" element={<LoginRegister/>}/>
         <Route path="/DrivyxPreDashboard" element={<DrivyxPreDashboard/>}/>
+        <Route path='/mainDashboard' element={<MainDashBoard/>}/>
       </Routes>
     </BrowserRouter>
   )

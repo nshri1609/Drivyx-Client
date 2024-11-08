@@ -85,8 +85,7 @@ const LoginRegister = () => {
           <div className="content">
             <h3>Welcome to Drivyx</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+              Drivyx: Where Businesses Grow Responsibly
             </p>
             <button className="btn transparent" onClick={toggleSignUpMode}>
               Sign up
@@ -103,8 +102,7 @@ const LoginRegister = () => {
           <div className="content">
             <h3>Welcome to Drivyx</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+              Drivyx: Where Businesses Grow Responsibly
             </p>
             <button className="btn transparent" onClick={toggleSignUpMode}>
               Sign in

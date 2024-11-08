@@ -1,15 +1,19 @@
 .WhyChoose {
     margin-top: 9rem;
-    margin-left: 2rem;
+    
 }
 
 .WhyChoose-header-main {
     margin-top: 6rem;
 }
 
+.WhyChoose-header h1 {
+    margin-left: 2rem;
+}
+
 .WhyChoose-header-mainContent {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .WhyChoose-header-mainContent img {
