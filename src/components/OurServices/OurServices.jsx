@@ -8,6 +8,7 @@ const OurServices = () => {
   return (
     <div className='OurServices'>
       <div className='OurServices-heaader'>
+        <hr />
         <h1>Be Part of the Change - Start Regenerating Today</h1>
         <p>
           Drivyx brings together technology and sustainability, offering businesses a streamlined
@@ -31,25 +32,24 @@ const OurServices = () => {
 
             <div className='OurServices-heaader-contentOne '>
               <img src={servicesTwo} className='OurServices-heaader-contentOne-img' alt="" />
-              <h2>Job & Services</h2>
+              <h2>Grants & Opportunities</h2>
               <p>
-                Connect with experts and professionals ready to help your <br />
-                business achieve its regenerative goals. From consulting to <br />
-                hands-on support, Drivyx’s network of skilled service <br />
-                providers empowers you with the resources to drive <br />
-                impactful change
+                Unlock funding and resources tailored to fuel your mission.<br />
+                Our grants and opportunities are designed to support <br />
+                projects that prioritize regenerative impact, innovation, and <br />
+                sustainable growth.<br />
               </p>
             </div>
           </div>
           <div className='OurServices-heaader-contentOne'>
             <img src={servicesThree} className='OurServices-heaader-contentOne-img' alt="" />
-            <h2>Job & Services</h2>
+            <h2>Impact project</h2>
             <p>
-              Connect with experts and professionals ready to help your <br />
-              business achieve its regenerative goals. From consulting to <br />
-              hands-on support, Drivyx’s network of skilled service <br />
-              providers empowers you with the resources to drive <br />
-              impactful change
+              Discover and support projects making a real difference. <br />
+              Drivyx showcases initiatives that lead the way in <br />
+              environmental restoration, community resilience, and <br />
+              sustainable practices, creating a network of regenerative  <br />
+              impact that you can be part of.
             </p>
           </div>
 

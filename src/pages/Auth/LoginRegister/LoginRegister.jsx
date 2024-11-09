@@ -103,7 +103,7 @@ const LoginRegister = () => {
           <form className="sign-up-form" onSubmit={handleSignUp}>
             <h2 className="title">Sign up</h2>
             <div className="input-field">
-              <i className="fas fa-user"><IoPerson /></i>
+              <i className="fas fa-user"></i>
               <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
             </div>
             <div className="input-field">
@@ -115,7 +115,7 @@ const LoginRegister = () => {
               <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
             </div>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
-            <input type="submit" className="btn" value="Sign up" disabled={loading} />
+            <input type="submit" className="btn" value={loading ? "Signing up..." : "Sign Up"} disabled={loading} />
             <p className="social-text">Or Sign up with social platforms</p>
             <div className="social-media">
               <a href="#" className="social-icon"><FaXTwitter /></a>

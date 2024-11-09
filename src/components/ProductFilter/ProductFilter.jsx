@@ -7,7 +7,7 @@ const ProductFilter = () => {
     <div className='ProductFilter'>
       <div className='ProductFilter-header'>
         <h1>Our Marketplace</h1>
-        <div className='ProductFilter-header-product'>
+        <div className='ProductFilter-header-product --ProductFilter'>
           <div className='ProductFilter-header-productOne'>
             <img src="https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg" alt="" />
             <h2>Drivyz Product</h2>

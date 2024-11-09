@@ -1,7 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
+
+  const marketplace = () => {
+    alert("Kindly login to explore our Services!");
+  }
+
   return (
     <div className='Hero'>
       <div className="leaf leaf1"></div>
@@ -21,8 +27,10 @@ const Hero = () => {
         </p>
 
         <div className='Hero-header-button'>
-          <button className='btnOne'>Marketplace</button>
-          <button className='btnTwo'>Get Started</button>
+          <button className='btnOne' onClick={marketplace}>Marketplace</button>
+          <Link to="/loginRegister">
+            <button className='btnTwo'>Get Started</button>
+          </Link>
         </div>
       </div>
     </div>
