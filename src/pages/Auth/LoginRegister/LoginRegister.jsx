@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './LoginRegister.css'; 
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { FaEnvelope } from "react-icons/fa";
-import { IoPerson } from "react-icons/io5";
 import { FaLock } from "react-icons/fa";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import UserContext from '../../../UserContext/UserContext';
 
 const LoginRegister = () => {
   const [isSignUpMode, setIsSignUpMode] = useState(false);
   const [formData, setFormData] = useState({ username: '', email: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-  const [user, setUser] = useState(null); 
+  const { setUser } = useContext(UserContext);  
   const navigate = useNavigate();
 
   const toggleSignUpMode = () => {
@@ -33,10 +33,8 @@ const LoginRegister = () => {
 
     try {
       const response = await axios.post('https://drivyxdatabase-6q2j.onrender.com/api/auth/register', formData);
-      // console.log('User registered:', response.data);
       toggleSignUpMode(); 
     } catch (error) {
-      // console.error('Registration error:', error.response?.data || error.message);
       setErrorMessage('Registration failed. Please try again.');
     } finally {
       setLoading(false);
@@ -53,21 +51,17 @@ const LoginRegister = () => {
         email: formData.email,
         password: formData.password,
       });
-      // console.log('User logged in:', loginResponse.data);
-
+      
+      localStorage.setItem('authToken', loginResponse.data.token);
       
       const userResponse = await axios.get('https://drivyxdatabase-6q2j.onrender.com/api/auth/user', {
         headers: { Authorization: `Bearer ${loginResponse.data.token}` }
       });
 
-      // console.log('User data fetched:', userResponse.data);
-
-      setUser(userResponse.data);
-
-      navigate('/mainDashboard', { state: { user: userResponse.data } });
+      setUser(userResponse.data); 
+      navigate('/mainDashboard', { state: { user: userResponse.data } });  
     } catch (error) {
-      console.error('Login error:', error.response?.data || error.message);
-      setErrorMessage(error.response?.data?.message || 'Login failed. Please check your credentials.');
+      setErrorMessage('Login failed. Please check your credentials.');
     } finally {
       setLoading(false);
     }
