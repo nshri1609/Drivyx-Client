@@ -32,11 +32,11 @@ const LoginRegister = () => {
     setErrorMessage(''); 
 
     try {
-      const response = await axios.post('https://drivyxdatabase.onrender.com/api/auth/register', formData);
-      console.log('User registered:', response.data);
+      const response = await axios.post('https://drivyxdatabase-6q2j.onrender.com/api/auth/register', formData);
+      // console.log('User registered:', response.data);
       toggleSignUpMode(); 
     } catch (error) {
-      console.error('Registration error:', error.response?.data || error.message);
+      // console.error('Registration error:', error.response?.data || error.message);
       setErrorMessage('Registration failed. Please try again.');
     } finally {
       setLoading(false);
@@ -49,18 +49,18 @@ const LoginRegister = () => {
     setErrorMessage(''); 
 
     try {
-      const loginResponse = await axios.post('https://drivyxdatabase.onrender.com/api/auth/login', {
+      const loginResponse = await axios.post('https://drivyxdatabase-6q2j.onrender.com/api/auth/login', {
         email: formData.email,
         password: formData.password,
       });
-      console.log('User logged in:', loginResponse.data);
+      // console.log('User logged in:', loginResponse.data);
 
       
-      const userResponse = await axios.get('https://drivyxdatabase.onrender.com/api/auth/user', {
+      const userResponse = await axios.get('https://drivyxdatabase-6q2j.onrender.com/api/auth/user', {
         headers: { Authorization: `Bearer ${loginResponse.data.token}` }
       });
 
-      console.log('User data fetched:', userResponse.data);
+      // console.log('User data fetched:', userResponse.data);
 
       setUser(userResponse.data);
 

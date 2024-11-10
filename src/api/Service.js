@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://drivyxdatabase.onrender.com/api/items';
+const API_BASE_URL = 'https://drivyxdatabase-6q2j.onrender.com/api/items';
 
 export const fetchItemsByType = async (type) => {
   try {

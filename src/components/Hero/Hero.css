@@ -1,6 +1,6 @@
 @media screen and (min-width: 350px) {
     .Hero {
-        background-image: url("https://images.pexels.com/photos/2874752/pexels-photo-2874752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-image: url("../../assets/HeroBg.webp");
         min-height: 80vh;
         position: relative;
         background-repeat: no-repeat;
@@ -163,7 +163,7 @@
 
 @media screen and (min-width: 1050px) {
     .Hero {
-        background-image: url("https://images.pexels.com/photos/2874752/pexels-photo-2874752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-image: url("../../assets/HeroBg.webp");
         min-height: 90vh;
         position: relative;
         background-repeat: no-repeat;

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://drivyxdatabase.onrender.com/api';
+const API_URL = 'https://drivyxdatabase-6q2j.onrender.com/api';
 
 export const registerUser = async (userData) => {
   try {

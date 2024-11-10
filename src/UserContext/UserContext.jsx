@@ -26,7 +26,7 @@ export const UserProvider = ({ children }) => {
 
   const uploadImage = async (token, image) => {
     try {
-      const response = await axios.post('https://drivyxdatabase.onrender.com/api/user/upload',
+      const response = await axios.post('https://drivyxdatabase-6q2j.onrender.com/api/user/upload',
         { image, userId: user._id }, {
         headers: {
           'Authorization': `Bearer ${token}`,

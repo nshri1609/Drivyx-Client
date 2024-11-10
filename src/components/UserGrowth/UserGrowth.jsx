@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './UserGrowth.css'
 
 const UserGrowth = () => {
@@ -14,7 +15,9 @@ const UserGrowth = () => {
             with Drivyx today.
           </p>
 
-          <button>Get Started</button>
+          <Link to="/loginRegister">
+            <button>Get Started</button>
+          </Link>
         </div>
       </div>
     </div>

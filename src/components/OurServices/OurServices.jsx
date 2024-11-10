@@ -19,7 +19,7 @@ const OurServices = () => {
         <div className='OurServices-heaader-content'>
           <div className='OurServices-innerfelex'>
             <div className='OurServices-heaader-contentOne first'>
-              <img src="https://cdn-icons-png.freepik.com/512/1710/1710023.png" className='onee' alt="" />
+              <img src={servicesOne} className='onee' alt="" />
               <h2>Job & Services</h2>
               <p>
                 Connect with experts and professionals ready to help your <br />

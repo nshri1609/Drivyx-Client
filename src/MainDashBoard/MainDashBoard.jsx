@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosCreate } from "react-icons/io";
 import Footer from '../components/Footer/Footer';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { fetchItemsByType, createItem } from '../api/Service';
 import "./MainDashBoard.css";
 import UserNav from '../components/Navbar/UserNav';
@@ -21,7 +21,7 @@ const MainDashBoard = () => {
         const items = await fetchItemsByType(selectedSection);
         setItems(items);
       } catch (error) {
-        console.error('Error fetching items:', error);
+        // console.error('Error fetching items:', error);
       }
     };
 
@@ -55,11 +55,15 @@ const MainDashBoard = () => {
       closeModal();
       setSelectedSection(selectedSection); 
     } catch (error) {
-      console.error('Error creating item:', error);
+      // console.error('Error creating item:', error);
     } finally {
       setLoading(false); 
     }
   };
+
+  const development = () => {
+    alert("Development Mode")
+  }
 
   const renderContent = () => {
     if (items.length === 0) {
@@ -86,7 +90,7 @@ const MainDashBoard = () => {
                 <h3>Price: ${item.additionalFields?.price || 'N/A'}</h3>
               </>
             )}
-            <button>View More</button>
+            <button onClick={development}>View More</button>
           </div>
         ))}
       </div>
@@ -140,6 +144,13 @@ const MainDashBoard = () => {
                   <input name="price" placeholder="Price" type="number" />
                 </>
               )}
+              <div>
+                <input type="checkbox" name="" id="" required/>
+                <p>By accessing or using Drivyx, we acknowledge that you have read, understood, and agree to be bound by these Terms and condition</p>
+                <Link to="/termAndCondition">
+                  <h3>Term & Condition</h3>
+                </Link>
+              </div>
               {selectedSection === 'Jobs' && <input name="jobLocation" placeholder="Job Location" />}
               <button type="submit" disabled={loading}>
                 {loading ? 'Creating...' : 'Submit'}
