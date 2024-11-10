@@ -35,7 +35,7 @@ const MainDashBoard = () => {
 
   const handleCreate = async (event) => {
     event.preventDefault();
-    setLoading(true); // Start loading state
+    setLoading(true); 
 
     const newItem = {
       type: selectedSection,
@@ -73,7 +73,7 @@ const MainDashBoard = () => {
     return (
       <div className='new'>
         {items.map((item) => (
-          <div key={item._id} className='ProductFilter-header-productOne'>
+          <div key={item._id} className='ProductFilter-header-productOne productOne-header'>
             <img src={item.imageUrl} alt={item.name} />
             <h2>{item.name}</h2>
             <p className='ProductFilter-p'>{item.description}</p>

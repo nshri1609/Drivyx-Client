@@ -1,13 +1,9 @@
 @media screen and (min-width: 350px) {
     .UserSettings-headers {
         margin-top: 10rem;
-        color: white;
+        color: black;
         margin-left: 5px;
     }
-
-    /* .UserSettings-headers h1 {
-        margin-left: 10px;
-    } */
 
     .UserSettings-sections {
         list-style: none;
@@ -18,7 +14,7 @@
     }
 
     .UserSettings-headers hr {
-        width: 20rem;
+        width: 22.6rem;
         margin-top: 20px;
         margin-bottom: 30px;
         border: none;
@@ -46,13 +42,14 @@
 
     .UserSettings-sections h3:hover {
         background-color: #333;
-        width: 20rem;
+        width: 22.6rem;
+        color: white;
     }
 
     .selected {
         background-color: #001218;
         color: #fff;
-        width: 20rem;
+        width: 22.6rem;
     }
 
     .UserSettings-content {
@@ -100,6 +97,131 @@
 
     .UserSettings-message.error {
         background-color: #dc3545;
+    }
+
+    .UserSettings-users {
+        display: flex;
+        background: rgb(245, 255, 0);
+        background: linear-gradient(90deg, rgba(245, 255, 0, 0.6446953781512605) 6%, rgba(12, 36, 0, 1) 84%, rgba(207, 201, 190, 1) 100%);
+        justify-content: space-between;
+        border-radius: 20px;
+        padding: 15px;
+        width: 22.6rem;
+    }
+    
+    .UserSettings-users-conetent h1 {
+        margin-bottom: 6px;
+        margin-top: 12px;
+    }
+    
+    .UserSettings-users-conetent p {
+        margin-top: 5px;
+        font-size: 10px;
+    }
+    
+    .UserSettings-users-conetent-button {
+        padding: 5px;
+        color: white;
+        background: green;
+        border: none;
+        width: 4rem;
+        border-radius: 10px;
+    }
+    
+    .MainDashBoard-New {
+        padding: 30px;
+    }
+
+    .productOne-header {
+        width: 22.5rem;
+    }
+    
+    .productOne-header img {
+        width: 20rem;
+    }
+    
+    
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .modal-content {
+        background: white;
+        padding: 20px;
+        width: 350px;
+        border-radius: 8px;
+        text-align: center;
+    }
+    
+    .modal-content h2 {
+        margin-bottom: 10px;
+    }
+    
+    .modal-content-button {
+        margin-top: 20px;
+        padding: 8px 16px;
+        background: red;
+        width: 19rem;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .modal-overlay-form button {
+        margin-top: 20px;
+        padding: 8px;
+        background: green;
+        width: 21rem;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
+    
+    .Services-patch {
+        margin-top: 10px;
+        color: rgba(0, 0, 0, 0.609);
+    }
+    
+    .Services-patchs {
+        margin-top: 18px;
+        color: rgba(0, 0, 0, 0.609);
+    }
+    
+    .modal-overlay-form {
+        margin-top: 30px;
+    }
+    
+    .modal-overlay-form input {
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 20rem;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    
+    .ProductFilter-p {
+        margin-bottom: 12px;
+    }
+    
+    .ProductFilter-y {
+        margin-top: 8px;
+    }
+    
+    .ProductFilter-ys {
+        margin-bottom: 8px;
     }
 
 }
@@ -213,129 +335,135 @@
         border-radius: 5px;
         color: #fff;
         background-color: #28a745;
-        /* Green for success */
     }
 
     .UserSettings-message.error {
         background-color: #dc3545;
-        /* Red for error */
     }
 
-}
+    .UserSettings-users {
+        display: flex;
+        background: rgb(245, 255, 0);
+        background: linear-gradient(90deg, rgba(245, 255, 0, 0.6446953781512605) 6%, rgba(12, 36, 0, 1) 84%, rgba(207, 201, 190, 1) 100%);
+        justify-content: space-between;
+        border-radius: 20px;
+        padding: 15px;
+        width: 84rem;
+    }
+    
+    .UserSettings-users-conetent h1 {
+        margin-bottom: 6px;
+    }
+    
+    .UserSettings-users-conetent p {
+        margin-top: 5px; 
+        font-size: 20px;
+    }
+    
+    .UserSettings-users-conetent-button {
+        padding: 5px;
+        color: white;
+        background: green;
+        border: none;
+        width: 8rem;
+        border-radius: 10px;
+    }
+    
+    .MainDashBoard-New {
+        padding: 30px;
+    }
+    
+    .productOne-header {
+        width: 25rem;
+    }
+    
+    .productOne-header img {
+        width: 22.3rem;
+        height: 15rem;
+    }
+    
+    
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    .modal-content {
+        background: white;
+        padding: 20px;
+        width: 400px;
+        border-radius: 8px;
+        text-align: center;
+    }
+    
+    .modal-content h2 {
+        margin-bottom: 10px;
+    }
+    
+    .modal-content-button {
+        margin-top: 20px;
+        padding: 8px 16px;
+        background: red;
+        width: 20rem;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .modal-overlay-form button {
+        margin-top: 20px;
+        padding: 8px 16px;
+        background: green;
+        width: 20rem;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    
+    .Services-patch {
+        margin-top: 10px;
+        color: rgba(0, 0, 0, 0.609);
+    }
+    
+    .Services-patchs {
+        margin-top: 18px;
+        color: rgba(0, 0, 0, 0.609);
+    }
+    
+    .modal-overlay-form {
+        margin-top: 30px;
+    }
+    
+    .modal-overlay-form input {
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 20rem;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    
+    .ProductFilter-p {
+        margin-bottom: 12px;
+    }
+    
+    .ProductFilter-y {
+        margin-top: 8px;
+    }
+    
+    .ProductFilter-ys {
+        margin-bottom: 8px;
+    }
 
-
-.UserSettings-users {
-    display: flex;
-    background: rgb(245, 255, 0);
-    background: linear-gradient(90deg, rgba(245, 255, 0, 0.6446953781512605) 6%, rgba(12, 36, 0, 1) 84%, rgba(207, 201, 190, 1) 100%);
-    justify-content: space-between;
-    border-radius: 20px;
-    padding: 15px;
-    width: 84rem;
-}
-
-.UserSettings-users-conetent h1 {
-    margin-bottom: 6px;
-}
-
-.UserSettings-users-conetent p {
-    margin-top: 5px;
-}
-
-.UserSettings-users-conetent-button {
-    padding: 5px;
-    color: white;
-    background: green;
-    border: none;
-    width: 8rem;
-    border-radius: 10px;
-}
-
-.MainDashBoard-New {
-    padding: 30px;
-}
-
-
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    width: 400px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.modal-content h2 {
-    margin-bottom: 10px;
-}
-
-.modal-content-button {
-    margin-top: 20px;
-    padding: 8px 16px;
-    background: red;
-    width: 20rem;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.modal-overlay-form button {
-    margin-top: 20px;
-    padding: 8px 16px;
-    background: green;
-    width: 20rem;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-
-.Services-patch {
-    margin-top: 10px;
-    color: rgba(0, 0, 0, 0.609);
-}
-
-.Services-patchs {
-    margin-top: 18px;
-    color: rgba(0, 0, 0, 0.609);
-}
-
-.modal-overlay-form {
-    margin-top: 30px;
-}
-
-.modal-overlay-form input {
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 20rem;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-.ProductFilter-p {
-    margin-bottom: 12px;
-}
-
-.ProductFilter-y {
-    margin-top: 8px;
-}
-
-.ProductFilter-ys {
-    margin-bottom: 8px;
 }

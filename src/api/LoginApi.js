@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-// API base URL (use the correct URL for your backend)
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://drivyxdatabase.onrender.com/api';
 
-// Registration API call
 export const registerUser = async (userData) => {
   try {
     const response = await axios.post(`${API_URL}/register`, userData);
@@ -13,7 +11,6 @@ export const registerUser = async (userData) => {
   }
 };
 
-// Login API call
 export const loginUser = async (credentials) => {
   try {
     const response = await axios.post(`${API_URL}/login`, credentials);
