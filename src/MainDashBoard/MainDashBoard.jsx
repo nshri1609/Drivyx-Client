@@ -6,6 +6,35 @@ import { useLocation } from 'react-router-dom';
 import { fetchItemsByType, createItem } from '../api/Service';
 import "./MainDashBoard.css";
 import UserNav from '../components/Navbar/UserNav';
+import "./Modal.css";
+
+
+
+const Modal = ({ isOpen, onClose, item }) => {
+  if (!isOpen || !item) return null;
+
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <button className="close-button" onClick={onClose}>X</button>
+        <img src={item.imageUrl} alt={item.name} />
+        <h2>{item.name}</h2>
+        <p>{item.description}</p>
+        <h3>Location</h3>
+        <p>{item.location}</p>
+        {item.additionalFields && (
+          <>
+            <h3>Years in Operation</h3>
+            <p>{item.additionalFields.yearsInOperation || 'N/A'} years</p>
+            <h3>Price</h3>
+            <p>${item.additionalFields.price || 'N/A'}</p>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}; 
+
 
 const MainDashBoard = () => {
   const location = useLocation();
@@ -86,12 +115,14 @@ const MainDashBoard = () => {
                 <h3>Price: ${item.additionalFields?.price || 'N/A'}</h3>
               </>
             )}
-            <button>View More</button>
-          </div>
+            <button onClick={() => openModal(item)}>View More</button>
+           </div>
         ))}
       </div>
     );
   };
+
+
   
   return (
     <div className='MainDashBoard'>
@@ -149,6 +180,7 @@ const MainDashBoard = () => {
           </div>
         </div>
       )}
+        <Modal isOpen={isModalOpen} onClose={closeModal} item={selectedItem} />
 
       <Footer />
     </div>

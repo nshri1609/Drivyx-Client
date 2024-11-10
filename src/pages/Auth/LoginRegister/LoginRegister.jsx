@@ -32,7 +32,7 @@ const LoginRegister = () => {
     setErrorMessage(''); 
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', formData);
+      const response = await axios.post('https://drivyxdatabase.onrender.com/api/auth/register', formData);
       console.log('User registered:', response.data);
       toggleSignUpMode(); 
     } catch (error) {
@@ -49,14 +49,14 @@ const LoginRegister = () => {
     setErrorMessage(''); 
 
     try {
-      const loginResponse = await axios.post('http://localhost:5000/api/auth/login', {
+      const loginResponse = await axios.post('https://drivyxdatabase.onrender.com/api/auth/login', {
         email: formData.email,
         password: formData.password,
       });
       console.log('User logged in:', loginResponse.data);
 
       
-      const userResponse = await axios.get('http://localhost:5000/api/auth/user', {
+      const userResponse = await axios.get('https://drivyxdatabase.onrender.com/api/auth/user', {
         headers: { Authorization: `Bearer ${loginResponse.data.token}` }
       });
 

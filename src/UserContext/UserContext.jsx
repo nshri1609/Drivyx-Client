@@ -10,7 +10,7 @@ export const UserProvider = ({ children }) => {
   // Fetch user data
   const fetchUserData = async (token) => {
     try {
-      const response = await axios.get('/api/auth/user', {
+      const response = await axios.get('https://drivyxdatabase.onrender.com/api/auth/user', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ export const UserProvider = ({ children }) => {
   // Upload image
   const uploadImage = async (token, image) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/user/upload',
+      const response = await axios.post('https://drivyxdatabase.onrender.com/api/user/upload',
         { image, userId: user._id }, {
         headers: {
           'Authorization': `Bearer ${token}`,
