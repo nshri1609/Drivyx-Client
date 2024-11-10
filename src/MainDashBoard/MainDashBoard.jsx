@@ -43,7 +43,18 @@ const MainDashBoard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [isModalOopen, setIsModalOopen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
+  const opeenModal = (item) => {
+    setSelectedItem(item);
+    setIsModalOopen(true);
+  };
+
+  const closeeModal = () => {
+    setIsModalOopen(false);
+    setSelectedItem(null);
+  };
   useEffect(() => {
     const getItems = async () => {
       try {
@@ -100,6 +111,9 @@ const MainDashBoard = () => {
     }
   
     return (
+      <>
+             
+
       <div className='new'>
         {items.map((item) => (
           <div key={item._id} className='ProductFilter-header-productOne'>
@@ -115,10 +129,12 @@ const MainDashBoard = () => {
                 <h3>Price: ${item.additionalFields?.price || 'N/A'}</h3>
               </>
             )}
-            <button onClick={() => openModal(item)}>View More</button>
+            <button onClick={() => opeenModal(item)}>View More</button>
            </div>
         ))}
       </div>
+       <Modal isOpen={isModalOpen} onClose={closeeModal} item={selectedItem} />
+      </>
     );
   };
 
@@ -180,7 +196,6 @@ const MainDashBoard = () => {
           </div>
         </div>
       )}
-        <Modal isOpen={isModalOpen} onClose={closeModal} item={selectedItem} />
 
       <Footer />
     </div>
